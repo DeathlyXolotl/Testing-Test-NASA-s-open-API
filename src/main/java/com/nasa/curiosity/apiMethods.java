@@ -108,6 +108,7 @@ public class apiMethods{
 
     private static TreeMap<String,Integer> countPhotosFromCameras(List<String> listCamera) {
 
+        // This tree map obtain the name of the camera and the amount of pictures that took that camera
         TreeMap<String, Integer> cameraCounterMap = new TreeMap<String, Integer>();
         for (String cameraName : listCamera) {
             Integer a = cameraCounterMap.get(cameraName);
@@ -120,6 +121,7 @@ public class apiMethods{
 
     private static Response requestResponse(String typeOfDate, String endpointDate, String apiKey, String roverName, String endpointApi){
 
+        // This uses rest assured to construct the request to the api and extract the response in json format
         return RestAssured.given().queryParam(typeOfDate, endpointDate).queryParam("api_key", apiKey).when().get(roverName + endpointApi).then().contentType(ContentType.JSON).extract().response();
     }
 
