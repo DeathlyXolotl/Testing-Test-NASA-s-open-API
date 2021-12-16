@@ -6,8 +6,9 @@ This project contain a Test Framework using tha NASA's API in JAVA with Rest Ass
 the complexity of using the API with Java-RestAssured technology. The API used in this project is the Mars Rover API that explore the image data gathered by the Nasa's rovers on Mars (Curiosity, Opportunity, Spirit and the new one Perseverance)
 to show us how is the world beyond earth. 
 
-Each photo taken by the cameras and rover are stored separately which means to access to that data requires to do differents queries. There are multiple ways to do queries 
+Each photo taken by the cameras and rover are stored separately which means access to that data requires differents queries. There are multiple ways to do queries 
 against the API. We can access through the name of the rover, earth date, martian sol date, name of the camera, image name, etc. 
+
 ## Table of Contents
 * [Test Framework Info](#test-framework-info)
 * [Endpoint Mars Rover API](#endpoint-mars-rover-api)
@@ -15,10 +16,9 @@ against the API. We can access through the name of the rover, earth date, martia
 * [Sources](#sources)
 
 ## Test Framework Info
-Using the technologies of JAVA and Rest assured was built a test framework to cover a series of challenges to see the behavior of the API and the level of complexity to 
-make a functional project with these technologies. The focus of the framework are recovering photos from an specified rover and date then validating theses photos 
-are the same if we are using a different query to access the data. Other is to validate that the amount of photos taken does not exceed certain number compared to other camera
-from different rovers.
+The test framework is based on Java-RestAssured technology using the Nasa's Mars Rover API to develop a series of challenges that are focus in recovering photos taken 
+by the rovers on the 1000 martian sol which can be extracted from different ways and queries. Then it validates that the photos extracted from the Curiosity Rover on the 
+1000 martian sol are the same extracted from the equivalent date on earth date. And last its validates that the amount of pictures taken on that date does not exceeds certaint amount of photos taken by cameras from other rovers.
 
 ## Endpoint Mars Rover API
 ### Base URL
